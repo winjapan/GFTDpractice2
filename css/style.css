@@ -1,16 +1,6 @@
 @charset "UTF-8";
-/* タブレット */
-@media screen and (min-width:959px){
 
-}
-/* スマホ（Android/iPhone） */
-@media screen and (min-width:600px){
-
-	body{
-		font-size: 3vw;
-	}
-}
-
+/* HTMLBodyの文字とイメージの設定 */
 /* body */
 body{
 	font-size: 100%;
@@ -18,48 +8,60 @@ body{
 
 body image{
 	width: 100%;
-	display: block;
+
 }
 
+
+
 /* header */
-.home{
-	background-image: url(../images/index/main-bg.jpg);
-	background-size: 1500px 900px;
+/* 背景画像の設定 */
+.homebg{
+	background-image: url("../images/index/main-bg.jpg"); /* 背景画像のURL */
+	background-size:cover; /* 背景画像のサイズは、横幅を基準に縦横比率として対応 */
+
 }
+.flexrow{
+	display: flex;
+	flex-direction: row; 
+	justify-content: space-around;
+
+}
+
 
 header{
 margin: 0;
 padding: 0%;
+
 }
+
 header .margin{
-	margin:-32px 0 0 187px;
+	margin:-20px 0 0 0px;
+
 }
+
 header a img{
-	width: 230px;
-	height: 150px;
-
+	width: 15vw;
+	height: 15vh;
 }
 
-header nav{
-	margin:28px 0 0 -85px;
-}
 header ul{
+
 display: flex;
-justify-content: center;
-margin:-118px 0 0 800px;
+justify-content: right;
+margin:30px 0px 0px  0px;
 
 }
 header ul li{
 	list-style-type: none;
 	padding-right: 2.5em;
 	font-weight: 500;
-	font-size: 18px;
+	font-size: 1vw;
 }
 
 
 
 header .navmargin{
-	margin:23px 0 0 -135px;
+	margin:23px 0 0 130px;
 }
 
 header .navmargin ul li{
@@ -84,16 +86,25 @@ main div{
 	margin-left: 50px;
 }
 
+main .indextxt{
+	/* display: flex;
+	flex-direction: column; */
+	margin-top: 110px;
+}
 main div h1{
 	font-family: 'Philosopher', sans-serif;
-	font-size: 80px;
+	font-size: 5.5vw;
 	font-weight: 200;
-	margin-bottom: 30px;
+	margin-right: 55px;
+	margin-top: 24px;
+	margin-bottom: 0px;
 }
 
+
 main div p{
-margin-top: 20px;
-font-size: 19px;
+	margin-top: 20px;
+	margin-right: 35px;
+	font-size: 1.2vw;
 }
 
 main div button{
@@ -102,8 +113,9 @@ main div button{
 	width: 170px;
 	height: 50px;
 	text-decoration: none;
-	border-radius: 2px;
+	border-radius: 5px;
 	color: rgb(219, 245, 250);
+	margin-left: 570px;
 }
 
 main div a{
@@ -204,7 +216,6 @@ position: absolute;
 }
 
 .column p{
-	
 	margin-left: -200px;
 	line-height: 27px;
 }
@@ -253,7 +264,6 @@ aside .p1{
 }
 
 /* menu */
-
 /* menu header */
 .heading2{
 	background-image: url(../images/menu/menu-bg.jpg);
@@ -675,3 +685,29 @@ footer small p{
 .contactcopy .empty{
 	margin-top: -5px;
 }
+
+
+
+/* スマホ（Android/iPhone） */
+@media screen and (min-width:667px){
+	/* こっちはスマホ対応専用 */
+	/* スマホ版クラスhomebg */
+	.homebg{
+	background-image: url("../images/index/main-bg.jpg"); /* クラスhomebgセレクト参照 */
+	background-size: cover; /* PC版クラスhomebgセレクト参照 */
+	background-position: 47% 10%; /* スマホサイトの背景画像位置 */
+	min-height: 100vh; /* PC版クラスhomebgセレクト参照 */
+}
+
+/* スマホ側のフレックス */
+.flexrow{
+width: 0;
+} 
+}
+
+
+/* PC/タブレット */
+ @media screen,print and (max-width:1024px){
+	/* PCサイト側のフレックスタイプ */
+
+} 
