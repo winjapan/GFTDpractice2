@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 /* HTMLBodyの文字とイメージの設定 */
 /* body */
 body{
@@ -11,14 +10,12 @@ body image{
 
 }
 
-
-
 /* header */
 /* 背景画像の設定 */
 .homebg{
 	background-image: url("../images/index/main-bg.jpg"); /* 背景画像のURL */
-	background-size:cover; /* 背景画像のサイズは、横幅を基準に縦横比率として対応 */
-
+	background-size:100%; /* 背景画像のサイズは、横幅を基準に縦横比率として対応 */
+	background-position: 50% -20px; /* スマホサイトの背景画像位置 */
 }
 .flexrow{
 	display: flex;
@@ -87,9 +84,9 @@ main div{
 }
 
 main .indextxt{
-	/* display: flex;
-	flex-direction: column; */
-	margin-top: 110px;
+	display: flex;
+	flex-direction: column;
+	margin-top: 115px;
 }
 main div h1{
 	font-family: 'Philosopher', sans-serif;
@@ -104,7 +101,7 @@ main div h1{
 main div p{
 	margin-top: 20px;
 	margin-right: 35px;
-	font-size: 1.2vw;
+	font-size: 100%;
 }
 
 main div button{
@@ -124,19 +121,18 @@ main div a{
 }
 
 /* news */
-
 /* news header */
 .heading{
 	background-image: url(../images/news/news-bg.jpg);
-	width: 1440px;
+	width: 100%;
 	height: 300px;
 }
 
 .bold{
 	font-family: 'Philosopher', sans-serif;
-	font-size: 70px;
+	font-size: 400%;
 	font-weight: 200;
-	margin-top: 60px;
+	margin-top: 40px;
 	margin-left: 687px;
 }
 
@@ -148,15 +144,17 @@ main div a{
 	margin-left: 400px;
 }
 .column img{
-	width: 490px;
-	height: 390px;
+	width: 100%;
+	margin-left: -200px;
+	margin-top: 45px;
+	/* margin-bottom: 30px; */
 }
 
 .column .date{
 position: absolute;
 	background: rgb(1, 178, 217);
-	width: 130px;
-	height: 130px;
+	width: 120px;
+	height: 120px;
 	border-radius: 150px;
 	color: rgb(219, 245, 250);
 	position: absolute;
@@ -167,12 +165,12 @@ position: absolute;
 .column .date2{
 	position: absolute;
 	top: -160px;
-	left: -20px;
+	left: -22px;
 }
 
 .column .date2 h2{
 	font-family: 'PT Sans Narrow', sans-serif;
-	font-size: 35px;
+	font-size: 200%;
 	font-weight: 100;
 	border-bottom: 1px solid rgb(219, 245, 250);
 	line-height: 1.7em;
@@ -192,46 +190,54 @@ position: absolute;
 .subtitle h1{
 	font-family: serif;
 	text-align: left;
-	font-size: 30px;
+	font-size: 230%;
 	margin-top: -110px;
 	margin-left: -150px;
-
+	width: 85%;
 }
+
 .subtitle h3{
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-	font-size: 14px;
+	font-size: 100%;
 	font-weight: 200;
 	text-align: left;
 	margin-left: -150px;
-	margin-top: -25px;
-
+	/* margin-top: -25px; */
 }
 
-.column img{
-	width: 650px;
-	height: 400px;
-	margin-left: -200px;
-	margin-top: 45px;
-	margin-bottom: 30px;
+.font{
+	font-size: 118%;
 }
 
-.column p{
+.mpadd{
+	margin-top: 0px;
+}
+
+.marginp1{
 	margin-left: -200px;
-	line-height: 27px;
 }
 .column  .marginp{
 	margin-top: 25px;
-
+	margin-left: -200px;
+	width: 100%;
 }
 .column  .marginp2{
 	margin-top: 20px;
 	margin-bottom: 60px;
+	margin-left: -200px;
+	font-size: 120%;
+	width: 100%
 }
 /* news aside */
 .column aside ul{
 	list-style-type: none;
-	margin-left: 195px;
+	/* margin-left: -60px; */
 	margin-top: 25px;
+}
+
+aside{
+	position: relative;
+	left: -65;
 }
 
 aside ul li{
@@ -245,21 +251,33 @@ aside .hlist{
 	font-weight: 100;
 	border-bottom: solid rgb(1, 178, 217) 3px;
 	padding-bottom: 15px;
-	width: 240px;
+	width: 205px;
+}
+
+.hlist2{
+	width: 205px;
 }
 
 aside .center{
 margin-left: 0px;
 }
+
+.asidmargin{
+	position: relative;
+	left: -80px;
+
+}
 aside div{
-	margin-left: 390px;
+	/* position: relative;
+	left: -60px; */
+	margin-left: 85px;
 	margin-top: 60px;
 	text-align: left;
 	
 }
 
 aside .p1{
-	font-size: 30px;
+	font-size: 100%;
 	font-weight: 100px;
 }
 
@@ -596,25 +614,49 @@ main .block .desmap dd{
 	color: rgb(76, 59, 45);
 }
 
+.flamewid iframe{
+	width: 53%;
+	height:500px;
+}
+
 main .block .desmap .dt1{
 padding-right: 10px;
 
 }
 	/* contact SNS */
+
+	
 	main .asidside{
 		background: rgb(251,246,238);
 	width: 1440px;
 	height: 570px;
 	margin-top: 60px;
+	margin-left: 0px;
 	}
 
 	main .asidside .asidegrid{
 		margin-top: 0px;
 		margin-left: 225px;
-		display: grid;
-		gap: 30px 40px;
-		grid-template-columns: 300px 300px 300px;
-		grid-template-rows: 40px 50px 305px;
+		display: flex;
+		flex-direction: row;
+	}
+
+	.snsdig{
+		position: relative;
+    left: -65px;
+		top: -131px;
+	}
+
+	.snsdig2{
+		position: relative;
+    left: -75px;
+    top: -131px;
+	}
+
+	.snsdig3{
+    position: relative;
+    top: -130px;
+    left: -85px;
 	}
 	
 	main .asidside .sns1{
@@ -624,18 +666,16 @@ padding-right: 10px;
 		color: rgb(76, 59, 45);
 		width: 300;
 		text-align: left;
-		grid-column: 2/1;
-		grid-row: 2/2;
+
 	}
 	main .asidside .sns2{
 		font-weight: 100;
 		font-size: 20px;
 		border-bottom: 2px solid rgb(1, 178, 217);
 		color: rgb(76, 59, 45);
-		width: 300;
+		width: 300px;
 		text-align: left;
-		grid-column: 2/2;
-		grid-row: 2/2;
+
 	}
 	main .asidside .sns3{
 
@@ -643,25 +683,37 @@ padding-right: 10px;
 		font-size: 20px;
 		border-bottom: 2px solid rgb(1, 178, 217);
 		color: rgb(76, 59, 45);
-		width: 300;
+		width: 300px;
 		text-align: left;
-		grid-column: 3/3;
-		grid-row: 2/2;
+		position: relative;
+    left: 0px;
 	}
 
-	main .asidegrid .iframe1{
-		grid-column: 3/1;
-		grid-row: 3/4;
+.iframe1{
+    margin-top: 30px;
+		height: 320px;
+		/* width: 100%; */
 	}
 
-	main .asidegrid .twitter-timeline{
-	grid-column: 2/2;
-	grid-row: 3/5;	
+	.twitter-time2{
+		position: relative;
+    top: -140px;
+    left: -570px;
 	}
 
-	main .asidegrid .iframe3{
-		grid-column: 3/3;
-		grid-row: 3/5;	
+	.twitter-timeline{
+		position: relative !important;
+		top: 30px;
+		/* width: 100% !important; */
+    height: 320px !important;
+}
+
+ .iframe3{
+	position: relative;
+	top: 30px;
+	left: 0px;
+	width: 100%;
+	height: 320px;
 	}
 	main .mag{
 		margin-top: -100px;
@@ -689,21 +741,858 @@ footer small p{
 
 
 /* スマホ（Android/iPhone） */
-@media screen and (min-width:667px){
+@media screen and (max-width:667px){
 	/* こっちはスマホ対応専用 */
 	/* スマホ版クラスhomebg */
 	.homebg{
 	background-image: url("../images/index/main-bg.jpg"); /* クラスhomebgセレクト参照 */
-	background-size: cover; /* PC版クラスhomebgセレクト参照 */
-	background-position: 47% 10%; /* スマホサイトの背景画像位置 */
-	min-height: 100vh; /* PC版クラスhomebgセレクト参照 */
+	background-size: 250% 103%; 	/* PC版クラスhomebgセレクト参照 */
+  background-position: 50% 0px; /* スマホサイトの背景画像位置 */
+  min-height: 98vh;  /* PC版クラスhomebgセレクト参照 */
+
 }
 
 /* スマホ側のフレックス */
 .flexrow{
-width: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 } 
+
+header{
+	margin: 0;
+	padding: 0%;
+	
+	}
+	
+	header .margin{
+		margin:-15px 0 0 90px;
+	
+	}
+	
+	header a img{
+		width: 50%;
+		height: 15vh;
+	}
+	
+	header ul{
+	
+	display: flex;
+	justify-content: right;
+	margin:-10px 0px 0px  35px;
+	
+	}
+	header ul li{
+		list-style-type: none;
+		padding-right: 2.8em;
+		font-weight: 500;
+		font-size: 80%;
+	}
+	
+	header .navmargin{
+		margin:23px 0 0 130px;
+	}
+	
+	header .navmargin ul li{
+		list-style-type: none;
+		padding-right: 3em;
+		font-weight: 500;
+		font-size: 18px;
+	}
+	
+	header ul li a{
+		text-decoration: none;
+		color: rgb(52, 34, 18);
+	}
+	
+	header ul li a:hover{
+		color: #0bd;
+	}
+
+/* index.html */
+main div{
+	text-align: center;
+	margin-top: 170px;
+	margin-left: 50px;
 }
+
+main .indextxt{
+	display: flex;
+	flex-direction: column;
+	margin-top: 110px;
+}
+main div h1{
+	font-family: 'Philosopher', sans-serif;
+	font-size: 225%;
+	font-weight: 200;
+	margin-left: -28px;
+	margin-top: -10px;
+	margin-bottom: 0px;
+	width: 100%;
+}
+
+
+main div p{
+	margin-top: 25px;
+	margin-left: -40px;
+	font-size: 103%;
+	width: 110%;
+}
+
+main div button{
+	margin-top: 30px;
+	background: rgb(1, 178, 217);
+	width: 210px;
+	height: 50px;
+	text-decoration: none;
+	border-radius: 5px;
+	color: rgb(219, 245, 250);
+	margin-left: 35px;
+}
+main div a{
+	color: rgb(219, 245, 250);
+	text-decoration: none;
+}
+
+/* news header */
+.headimg{
+	background-image: url(../images/news/news-bg.jpg);
+	background-size: 105%;
+	background-blend-mode: screen;
+	background-position-x: -18px;
+	/* width: 105%; */
+
+}
+
+.mediamargin{
+position: relative;
+left: 0px;
+}
+
+.mediamargin1{
+	position: relative;
+	left: -500px;
+	}
+
+	.mediamargin2{
+		position: relative;
+		left: -0px;
+	}
+.bold{
+	font-family: 'Philosopher', sans-serif;
+	font-size: 200%;
+	font-weight: 200;
+	margin-top: 37px;
+	margin-left: 140px;
+}
+
+/* news main */
+.column{
+	flex-direction: column;
+	margin-left: 0px;
+}
+.column img{
+	width: 90%;
+	margin-left: 20px;
+}
+
+.column .date{
+position: absolute;
+	background: rgb(1, 178, 217);
+	width: 70px;
+	height: 70px;
+	border-radius: 150px;
+	color: rgb(219, 245, 250);
+	position: absolute;
+	left: -30px;
+	top: 100px;
+}
+
+.column .date2{
+	position: absolute;
+	top: -165px;
+	left: -32px;
+}
+
+.column .date2 h2{
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-size: 100%;
+	font-weight: 200;
+	border-bottom: 1px solid rgb(219, 245, 250);
+	line-height: 1.7em;
+	letter-spacing: 0.1em;
+
+}
+.column .date2 h3{
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-size:100%;
+	font-weight: 200;
+	margin-top: 5px;
+	line-height: 1.7em;
+	letter-spacing: 0.1em;
+
+}
+
+.subtitle h1{
+	font-family: serif;
+	text-align: left;
+	font-size: 125%;
+	margin-top: -195px;
+	margin-left: -5px;
+	width: 100%;
+	
+}
+.subtitle h3{
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 14px;
+	font-weight: 200;
+	text-align: left;
+	margin-left: -5px;
+	margin-top: 10px;
+
+}
+
+.column p{
+font-size: 90%;
+}
+.column  .marginp{
+	margin-top: 25px;
+	margin-left: 0;
+	margin-left: 17px;
+	width: 94%;
+
+}
+.column  .marginp2{
+	margin-top: 20px;
+	margin-bottom: 60px;
+	margin-left: 0;
+	margin-left: 17px;
+	width: 95%;
+	font-size: 85%;
+
+}
+/* news aside */
+.column aside ul{
+	list-style-type: none;
+	position: relative;
+	left: -293px;
+	top: -80px;
+}
+
+aside ul li{
+	padding-top:10px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid rgb(237,237,237);
+}
+			
+aside .hlist{	
+	font-size: 20px;
+	font-weight: 100;
+	border-bottom: solid rgb(1, 178, 217) 3px;
+	padding-bottom: 15px;
+	width: 345px;
+}
+aside .hlist2{
+	width: 345px;
+}
+
+aside .center{
+	margin-left: 0px;
+	width: 30%;
+
+}
+aside div{
+	margin-left: 390px;
+	margin-top: 60px;
+	text-align: left;
+	
+}
+
+aside .plist{
+	position: relative;
+	left: -250px;
+	top: -45px;
+	width: 340px;
+	font-size: 20px;
+	font-weight: 100;
+	border-bottom: solid rgb(1, 178, 217) 3px;
+	padding-bottom: 15px;
+}
+
+aside .plist2{
+	width: 340px;
+	position: relative;
+	left: -250px;
+	top: -60px;
+}
+aside .p1{
+	font-size: 30px;
+	font-weight: 100px;
+}
+
+
+/* menu */
+/* menu header */
+.heading2{
+	background-image: url(../images/menu/menu-bg.jpg);
+	background-size: 270%;
+	width: 1300px;
+	height: 2100px;
+	background-position-x: -1055px;
+	background-blend-mode: screen;
+	background-color: rgba(255, 255, 255, 0.45);
+}
+
+.manubg{
+	width: 123%;
+	height: 100%;
+	position: relative;
+	left: -110px;
+	top: 58px;
+}
+
+.menunav{
+	position: relative;
+	left: 5px;
+	top: 90px;
+}
+
+.menunav li a{
+	font-size: 230%;
+	padding: 1em;
+}
+.menudes{
+	margin-top: 374px;
+
+}
+.menudes h1{
+	margin-top: 0px;
+	margin-left: 546px;
+	font-size: 700%;
+	font-weight: 100;
+	color: rgb(52, 34, 18);
+	font-family: 'Philosopher', sans-serif;
+}
+.menudes p{
+	margin-left: 80px;
+	margin-top: 10px;
+	font-size: 290%;
+}
+
+.tilelayout{
+	margin: 100px 0 -60px 0;
+}
+
+/* main grid */
+main .tile{
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+}
+
+
+main .centerout{
+	margin-left: 230px;
+}
+main .tile1{
+	width: 1750%;
+	height: 839px;
+	/* padding-right: 15px;
+	padding-bottom: 50px; */
+	position: relative;
+	left: -180px;
+}
+
+main .text1{
+	font-weight: 100;
+	font-size: 300%;
+	margin-top: -55px;
+	margin-bottom: 80px;
+	margin-left: -220px;
+	width: 1200%;
+}
+
+main .tile2{
+	width: 1730%;
+	height: 839px;
+	position: relative;
+	left: -180px;
+	
+}
+
+
+
+main .text2{
+	font-weight: 100;
+	font-size: 300%;
+	margin-top: 0px;
+	margin-left: -220px;
+	margin-bottom: 80px;
+	width: 1200%;
+}
+
+
+main .tile3 {
+	width: 1730%;
+	height: 839px;
+	position: relative;
+	left: -180px;
+}
+
+
+main .text3{
+	font-weight: 100;
+	font-size: 300%;
+	width: 1200%;
+	margin-top: 0px;
+	margin-left: -220px;
+	margin-bottom: 80px;
+}
+
+main .tile4{
+	width: 1730%;
+	height: 839px;
+	position: relative;
+	left: -180px;
+}
+
+
+main .text4{
+	font-weight: 100;
+	font-size: 300%;
+	width: 1200%;
+	margin-top: 0px;
+	margin-left: -220px;
+	margin-bottom: 80px;
+
+}
+
+main .tile5{
+	width: 1730%;
+	height: 839px;
+	position: relative;
+	left: -180px;
+}
+
+
+
+main .text5{
+	font-weight: 100;
+	font-size: 300%;
+	width: 1200%;
+	margin-top: 0px;
+	margin-left: -220px;
+	margin-bottom: 80px;
+}
+
+main .tile6{
+	width: 1730%;
+	height: 839px;
+	position: relative;
+	left: -180px;
+}
+
+main .text6{
+	font-weight: 100;
+	font-size: 300%;
+	width: 1200%;
+	margin-top: 0px;
+	margin-left: -220px;
+	margin-bottom: 80px;
+}
+
+main .tile7{
+	width: 1730%;
+	height: 839px;
+	position: relative;
+	left: -180px;
+}
+
+
+main .text7{
+	font-weight: 100;
+	font-size: 300%;
+	width: 1200%;
+	margin-top: 0px;
+	margin-left: -220px;
+	margin-bottom: 80px;
+}
+
+main .tile8{
+	width: 1730%;
+	height: 839px;
+	position: relative;
+	left: -180px;
+}
+
+
+
+	main .text8{
+		font-weight: 100;
+		font-size: 300%;
+		width: 1200%;
+		margin-top: 0px;
+	margin-left: -220px;
+	margin-bottom: 80px;
+	}
+
+main .tile9{
+	width: 1730%;
+	height: 839px;
+	position: relative;
+	left: -180px;
+}
+
+ 
+
+	main .text9{
+		font-weight: 100;
+		font-size: 300%;
+		width: 1200%;
+		margin-top: 0px;
+		margin-left: -220px;
+		margin-bottom: 80px;
+	}
+
+	section{
+		margin-bottom: 50px;
+	}
+
+	/* contact header */
+	.contactimg{
+    padding-left: 40px;
+    padding-left: 40px;
+    background-image: url(../images/contact/contact-bg.jpg);
+    width: 400%;
+    height: 2650px;
+    background-size: 400%;
+    background-position: 2% 10%;
+    background-blend-mode: screen;
+    background-color: rgba(255, 255, 255, 0.45);
+	}
+
+	.contlogo{
+    width: 160%;
+    height: 100%;
+    position: relative;
+    left: -290px;
+    top: 35px;
+
+	}
+
+	.contactimg ul{
+    display: flex;
+    justify-content: right;
+    position: relative;
+    left: 50px;
+    top: 130px;
+	}
+
+	.contactimg ul li a{
+    list-style-type: none;
+    padding-right: 2em;
+    font-weight: 500;
+    font-size: 450%;
+	}
+
+	.contactimg h1{
+    font-size: 1000%;
+    font-weight: 100;
+    color: rgb(52, 34, 18);
+    font-family: 'Philosopher', sans-serif;
+    position: relative;
+		top: 240px;
+    left: -155px;
+	} 
+
+	form{
+    position: relative;
+    top: 300px;
+    left: -155px;
+	}
+
+	form dl,dt,dd{
+		position: relative;
+		top: -10px;
+	}
+
+	form p{
+    margin-top: 35px;
+    margin-bottom: 55px;
+    font-size: 450%;
+}
+	
+	form input[type="text"]{
+		background: rgba(252,252,252,0.5);
+		border: 1px solid rgb(252,252,252);
+		border-radius: 5px 5px 5px 5px;
+		width: 104%;
+		height: 165px;
+	}
+
+	form input[type="email"]{
+		background: rgba(252,252,252,0.5);
+		border: 1px solid rgb(252,252,252);
+		border-radius: 5px 5px 5px 5px;
+		width: 104%;
+    height: 165px;
+	}
+
+	form textarea{
+		background: rgba(252,252,252,0.5);
+		border: 1px solid rgb(252,252,252);
+		border-radius: 5px 5px 5px 5px;
+		width: 104%;
+		height: 340px;
+	}
+
+	form input[type="submit"]{
+    margin-top: 15px;
+    background: rgb(1, 178, 217);
+    border-radius: 5px 5px 5px 5px;
+    color: rgb(219, 245, 250);
+    width: 24%;
+    height: 150px;
+    font-size: 350%;
+    position: relative;
+    top: 45px;
+}
+
+	/* contact main */
+	/* contact main map */
+	main .block{
+		margin-top: -95px;
+	}
+
+	main .block .areatitle{
+    font-weight: 100;
+    font-size: 200%;
+    text-align: left;
+    border-bottom: 7px solid rgb(1, 178, 217);
+    color: rgb(76, 59, 45);
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+    width: 1350px;
+    position: relative;
+    /* left: -5px; */
+	}
+	main .block .mappos{
+		margin-left: -35px;
+	}
+
+main .block .desmap{
+    /* padding-right: 10px; */
+    font-size: 300%;
+    text-align: left;
+    width: 500px;
+    position: relative;
+    left: -170px;
+}
+
+.dd2{
+	position: relative;
+	left: -280px;
+}
+
+.dd3{
+	position: relative;
+	left: -70px;
+}
+
+.dd4{
+	position: relative;
+	left: -150px;
+}
+main .block .desmap dl{
+	width: 200px;
+
+}
+
+main .block .desmap dt,
+main .block .desmap dd{
+	padding-top: 5px;
+	padding-bottom: 1px;
+}
+
+main .block .desmap dt{
+    float: left;
+    color: rgb(76, 59, 45);
+    font-size: 150%;
+    width: 300px;
+}
+main .block .desmap dd{
+	text-align: left;
+	color: rgb(76, 59, 45);
+	font-size: 150%;
+	width: 1300px;
+}
+
+main .block .desmap .dt1{
+	font-size: 150%;
+	width: 500px;
+	float: left;
+}
+
+.flamewid iframe{
+	margin-top: 60px;
+	margin-bottom: 30px;
+	width: 500%;
+	height: 1300px;
+
+}
+
+	/* contact SNS */
+	main .asidside{
+    background: rgb(251,246,238);
+    width: 400%;
+    height: 4700px;
+		margin-top: 60px;
+		margin-left: 0;
+	}
+
+	main .asidside .asidegrid{
+		margin-top: 0px;
+		margin-left: 225px;
+		display: flex;
+		flex-direction: column;
+
+	}
+	
+	main .asidside .sns1{
+    font-weight: 100;
+    font-size: 400%;
+    border-bottom: 7px solid rgb(1, 178, 217);
+    color: rgb(76, 59, 45);
+    width: 1400px;
+    order: -1;
+    padding-left: 0.5em;
+    padding-bottom: 20px;
+    margin-left: -280px;
+    top: -500px;
+   
+}
+
+	main .asidside .sns2{
+    font-weight: 100;
+    font-size: 400%;
+    border-bottom: 7px solid rgb(1, 178, 217);
+    color: rgb(76, 59, 45);
+    width: 1400px;
+    order: -1;
+    padding-bottom: 20px;
+		margin-top: 590px;
+    margin-bottom: 20px;
+    padding-left: 0.5em;
+    position: relative;
+		left: -35px;
+
+	}
+	main .asidside .sns3{
+		font-weight: 100;
+    font-size: 400%;
+    border-bottom: 7px solid rgb(1, 178, 217);
+    color: rgb(76, 59, 45);
+    width: 1400px;
+    order: -1;
+    padding-bottom: 20px;
+    margin-top: 950px;
+    margin-bottom: 20px;
+    padding-left: 0.5em;
+    position: relative;
+    left: 0px;
+	}
+
+	.snsdig{
+    order: -1;
+    position: relative;
+    /* left: 50px; */
+    margin-left: 200px;
+    top: -100px;
+	}
+
+	.snsdig2{
+		position: relative;
+    top: -300px;
+    left: -200px;
+}
+	
+.snsdig3{
+	position: relative;
+    top: -220px;
+    left: -230px;
+}
+
+	.iframe1{ 
+    height: 320px;
+    transform: scale3d(3.8, 3.5, 0.5);
+    margin-left: -340px;
+    margin-top: 520px;
+	}
+
+.twitter-timeline{
+	transform: scale3d(4.7,4,1);
+	position: relative !important;
+	top: 600px;
+	left: 50px;
+	}
+
+
+
+	.iframe3{
+    width: 114%;
+    height: 1000px;
+    position: relative;
+    top: 100px;
+    left: 0px;
+
+	}
+	main .mag{
+		margin-top: -100px;
+	}
+	/* footer */
+footer{
+	text-align: center;
+	background: rgb(52, 34, 18);
+	height: 70px;
+}
+footer small p{
+	font-size: 10px;
+	color: rgb(224, 223, 220);
+	padding-top:46px;
+}
+
+.contactp
+{
+	position: relative;
+	top: -100px;
+	font-size: 250%;
+	color: rgb(224, 223, 220);
+
+}
+.marginfoot{
+	text-align: center;
+	background: rgb(52, 34, 18);
+	height: 100px;
+	width: 433%;
+}
+
+.fontfoot{
+	font-size: 200%;
+	color: rgb(224, 223, 220);
+	padding-top: 65px;
+}
+.contactcopy{
+			margin-top: -45px;
+			width: 400%;
+			padding-top: 150px;
+			position: relative;
+			top: 0px;
+}
+.contactcopy .empty{
+	margin-top: -5px;
+}
+}
+
 
 
 /* PC/タブレット */
